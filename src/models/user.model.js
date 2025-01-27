@@ -2,7 +2,6 @@ import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-
 const userSchema = new Schema({
     
     name : {
@@ -29,7 +28,7 @@ const userSchema = new Schema({
     },
 
     mobileNumber : {
-        type : Integer,
+        type : Number,
         require : true,
         trim : true,
         unique : true

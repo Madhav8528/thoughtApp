@@ -7,7 +7,7 @@ const db_name = "thoughtApp"
 const dbConnect = async () => {
     
     try {
-        const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URL} / ${db_name}`)
+        const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URL}`)
         console.log(`Database connected with connection host : ${connectionInstance.connection.host}`)  
         
         app.on("error", (error) => {
