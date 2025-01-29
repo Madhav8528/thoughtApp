@@ -57,12 +57,12 @@ userSchema.pre("save", async function (next) {
     next();
 })
 
-userSchema.method.checkPassword = async function (password){
+userSchema.methods.checkPassword = async function (password){
 
     return await bcrypt.compare(password, this.password)
 }
 
-userSchema.method.generateAccessToken = function(){
+userSchema.methods.generateAccessToken = function(){
 
     const payload = {
         _id : this._id,
@@ -81,7 +81,7 @@ userSchema.method.generateAccessToken = function(){
     )
 }
 
-userSchema.method.generateRefreshToken = function(){
+userSchema.methods.generateRefreshToken = function(){
     const payload = {
         _id : this._id
     }
