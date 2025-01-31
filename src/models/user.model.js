@@ -39,6 +39,11 @@ const userSchema = new Schema({
         require : [true, "Password is required"]
     },
 
+    favourite : {
+        type : Array,
+        default : undefined
+    },
+
     refreshToken : {
         type : String
     },

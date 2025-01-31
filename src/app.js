@@ -20,9 +20,10 @@ app.use(express.urlencoded({ extended : true, limit : "20kb" }))
 
 //routes for controllers
 
-import userRoutes from "./routes/user.routes.js"
+import userRoutes from "./routes/user.routes.js";
+import thoughtRoutes from "./routes/thought.routes.js";
 
-app.use("/api/v1/thought", userRoutes)
-
+app.use("/api/v1/user", userRoutes)
+app.use("/api/v1/thought", thoughtRoutes)
 
 export { app };
