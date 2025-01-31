@@ -55,7 +55,7 @@ const generateOtpforRegistration = asyncHandler(async (req, res) => {
                 { digits : true, 
                   upperCaseAlphabets : false,
                   lowerCaseAlphabets : false,
-                specialChars : false })
+                  specialChars : false })
     
     const OTP = await Otp.create({
         email,
